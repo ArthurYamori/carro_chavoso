@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.background{
+    height: 100vh;
+    width: 100%;
+    background-image: url(img/paisagem.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.highway{
+    height: 190px;
+    width: 500%;
+    display: block;
+    background-image: url(img/estrada.jpg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation: highway 5s linear infinite;
+}
+
+.highway1{
+    height: 100px;
+    width: 500%;
+    display: block;
+    background-image: url(img/estrada.jpg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation: highway 5s linear infinite;
+}
+
+@keyframes highway {
+    100%{
+        transform: translateX(-2400px);
+    }
+}
+
+.car{
+    width: 400px;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+}
+
+.car img{
+    width: 100%;
+    animation: car 1s linear infinite;
+}
+
+@keyframes car{
+    100%{
+        transform: translateY(-1px);
+    }
+    50%{
+        transform: translateY(-2px);
+    }
+    0%{
+        transform: translateY(-3px);
+    }
+}
+
+.wheel{
+    left: 50%;
+    bottom: 178px;
+    transform: translateX(-50px);
+    position: absolute;
+    z-index: 2;
+}
+
+.wheel img{
+    width: 72px;
+    height: 72px;
+    animation: wheel 1s linear infinite;
+}
+
+.back-wheel{
+    left: -80px;
+    top: 20px;
+    position: absolute;
+}
+
+.front-wheel{
+    left: 126px;
+    top: 20px;
+    position: absolute;
+}
+
+@keyframes wheel{
+    100%{
+        transform: rotate(360deg);
+    }
+}
